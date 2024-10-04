@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="greeting">Hello, User!</h1>
+        <input type="text" id="username" placeholder="Enter your name" />
+        <button onclick="setUserName()">Set Name</button>
+        <button onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+      </header>
+
+      <main>
+        <section class="task-input">
+          <input type="text" id="task-input" placeholder="Enter a new task" />
+          <button onclick="addTask()">Add Task</button>
+        </section>
+
+        <section class="task-filter">
+          <button onclick="filterTasks('pending')">Pending Tasks</button>
+          <button onclick="filterTasks('completed')">Completed Tasks</button>
+        </section>
+
+        <section class="task-list" id="task-list"></section>
+
+        <section class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
